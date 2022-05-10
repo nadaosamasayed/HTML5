@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+        <input type="color" id="mood">
+        <button onclick="myfunction()">CLICK</button>
+        <canvas id="drow" style="width: 1200px; height:500px; border: 5px solid rgb(8, 236, 236);" ></canvas>
+    
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var canv = document.getElementById("drow");
+        var xx= canv.getContext("2d");
+        var color = document.getElementById("mood");
+
+        function myfunction(){
+           
+            // xx.moveTo(0, 0);
+            // xx.lineTo(200, 100);
+            // xx.stroke();
+            for(var i=0;i<50;i++){
+                xx.beginPath();
+                let x= (Math.random()*1200);
+            let y=(Math.random()*500);
+          //  let z=(Math.random()*100)
+                xx.arc(x,y,5,0.2*Math.PI,0);
+                xx.strokeStyle=color.value;
+
+            }
+           
+          //  xx.beginPath();
+           // xx.arc(x,y, 5, 0, 2 * Math.PI);
+            xx.stroke();
+        }
+    </script>
+</body>
+</html>
